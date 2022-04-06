@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'Screens/giris/giris.dart';
-import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
