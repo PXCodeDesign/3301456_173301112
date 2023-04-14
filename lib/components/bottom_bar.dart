@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/screens/downloadPage.dart';
-import 'package:movie_app/screens/homePage.dart';
-import 'package:movie_app/screens/notificationsPage.dart';
-import 'package:movie_app/screens/searchPage.dart';
-import 'package:movie_app/screens/trendingPage.dart';
+import 'package:movie_app/screens/download_page.dart';
+import 'package:movie_app/screens/home_page.dart';
+import 'package:movie_app/screens/notifications_page.dart';
+import 'package:movie_app/screens/search_page.dart';
+import 'package:movie_app/screens/trending_page.dart';
 
 class BottomBar extends StatelessWidget {
   const BottomBar({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class BottomBar extends StatelessWidget {
             color: Colors.white,
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => SearchPage()));
+                  MaterialPageRoute(builder: (context) => const SearchPage()));
             },
           ),
           IconButton(

@@ -1,7 +1,7 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_app/components/profileButton.dart';
-import 'package:movie_app/screens/searchPage.dart';
+import 'package:movie_app/components/profile_button.dart';
+import 'package:movie_app/screens/modal_page.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({Key? key}) : super(key: key);
@@ -20,25 +20,7 @@ class HomeAppBar extends StatelessWidget {
               showModalBottomSheet<void>(
                 context: context,
                 builder: (BuildContext context) {
-                  return Container(
-                    height: 500,
-                    color: Colors.black,
-                    child: Center(
-                      child: IconButton(
-                        icon: const Icon(
-                          Icons.search,
-                          size: 32,
-                        ),
-                        color: Colors.white,
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SearchPage()));
-                        },
-                      ),
-                    ),
-                  );
+                  return const ModalPage();
                 },
               );
             },

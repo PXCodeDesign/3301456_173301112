@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/components/homeAppBar.dart';
-import 'package:movie_app/components/bottomBar.dart';
+import 'package:movie_app/components/home_appbar.dart';
+import 'package:movie_app/components/bottom_bar.dart';
+import 'package:movie_app/components/my_list.dart';
 import 'package:movie_app/components/preview.dart';
 import 'package:movie_app/components/trending.dart';
 
@@ -14,12 +15,8 @@ class HomePage extends StatelessWidget {
         preferredSize: Size.fromHeight(60.0),
         child: HomeAppBar(),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: const [
-          Preview(),
-          Trending(),
-        ],
+      body: ListView(
+        children: const [Preview(), Trending(), MyList()],
       ),
       bottomNavigationBar: const BottomBar(),
     );

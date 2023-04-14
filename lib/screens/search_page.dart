@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:movie_app/components/bottomBar.dart';
+import 'package:movie_app/components/appbars.dart';
+import 'package:movie_app/components/bottom_bar.dart';
 import 'package:movie_app/components/search.dart';
 import 'package:movie_app/movie/movie.dart';
-import 'package:movie_app/screens/detailPage.dart';
+import 'package:movie_app/screens/detail_page.dart';
 
 class SearchPage extends StatefulWidget {
+  const SearchPage({super.key});
+
   @override
   _SearchPageState createState() => _SearchPageState();
 }
@@ -34,35 +36,9 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.black,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SvgPicture.asset(
-              'assets/movie.svg',
-              fit: BoxFit.cover,
-              height: 32,
-            ),
-            SizedBox(
-              height: 32,
-              width: 32,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: SizedBox.fromSize(
-                  size: const Size.fromRadius(40),
-                  child: Image.asset(
-                    "assets/person.jpg",
-                    width: 32,
-                    height: 32,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            )
-          ],
-        ),
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBars(),
       ),
       body: Column(
         children: [
