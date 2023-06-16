@@ -9,14 +9,14 @@ class AppBars extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.transparent,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SvgPicture.asset(
-            'assets/movie.svg',
+            'assets/aa.svg',
             fit: BoxFit.cover,
-            height: 32,
+            height: 40,
           ),
           const ProfileButton()
         ],

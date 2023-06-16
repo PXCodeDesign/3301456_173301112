@@ -10,7 +10,7 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(0, 233, 233, 233),
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -26,9 +26,9 @@ class HomeAppBar extends StatelessWidget {
             },
           ),
           SvgPicture.asset(
-            'assets/movie.svg',
+            'assets/aa.svg',
             fit: BoxFit.cover,
-            height: 32,
+            height: 40,
           ),
           const ProfileButton()
         ],

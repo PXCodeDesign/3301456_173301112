@@ -36,6 +36,7 @@ class _SearchPageState extends State<SearchPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60.0),
         child: AppBars(),

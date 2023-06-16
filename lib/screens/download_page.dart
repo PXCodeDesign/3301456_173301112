@@ -17,6 +17,8 @@ class _DownloadPageState extends State<DownloadPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60.0),
         child: AppBars(),

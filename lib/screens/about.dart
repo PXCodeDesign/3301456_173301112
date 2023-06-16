@@ -7,6 +7,8 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60.0),
         child: BackAppBar(),
@@ -25,8 +27,8 @@ class AboutPage extends StatelessWidget {
               ),
             ],
           ),
-          Column(
-            children: const [
+          const Column(
+            children: [
               ListTile(
                 title: Text('Uygulama Versiyonu',
                     style: TextStyle(color: Colors.white)),

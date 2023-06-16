@@ -16,6 +16,8 @@ class _NotificationsPageState extends State<NotificationsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBodyBehindAppBar: true,
+        extendBody: true,
         appBar: const PreferredSize(
           preferredSize: Size.fromHeight(60.0),
           child: AppBars(),
@@ -38,7 +40,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                       child: Row(
                         children: [
                           SizedBox(
-                            width: 160,
+                            width: MediaQuery.of(context).size.width * 0.4,
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10),
                               child: SizedBox.fromSize(
@@ -54,7 +56,7 @@ class _NotificationsPageState extends State<NotificationsPage> {
                           Container(
                             padding: const EdgeInsets.only(
                                 left: 10, top: 5, bottom: 5),
-                            width: 220,
+                            width: MediaQuery.of(context).size.width * 0.5,
                             height: 100,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,

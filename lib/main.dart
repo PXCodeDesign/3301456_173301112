@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: "movie_app",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFF0C0C0C),
+        scaffoldBackgroundColor: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       initialRoute: "/",

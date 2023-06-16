@@ -12,7 +12,7 @@ class Search extends StatelessWidget {
           margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
           height: 50,
           decoration: const BoxDecoration(
-              color: Colors.black,
+              color: Color(0xFF111111),
               borderRadius: BorderRadius.all(Radius.circular(10.0))),
           child: TextField(
             onChanged: onSearch,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:movie_app/screens/about.dart';
+import 'package:movie_app/screens/login.dart';
 import 'package:movie_app/screens/my_list_page.dart';
 import 'package:movie_app/screens/notifications_page.dart';
 
@@ -10,6 +11,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60.0),
         child: AppBar(
@@ -25,9 +27,9 @@ class ProfilePage extends StatelessWidget {
                 },
               ),
               SvgPicture.asset(
-                'assets/movie.svg',
+                'assets/aa.svg',
                 fit: BoxFit.cover,
-                height: 32,
+                height: 40,
               ),
               const SizedBox(
                 width: 40,
@@ -74,7 +76,7 @@ class ProfilePage extends StatelessWidget {
                   margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      color: Colors.black),
+                      color: const Color(0xFF111111)),
                   child: ListTile(
                     leading: const Icon(Icons.notifications,
                         size: 28, color: Colors.white),
@@ -99,7 +101,7 @@ class ProfilePage extends StatelessWidget {
                   margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.black),
+                      color: const Color(0xFF111111)),
                   child: ListTile(
                     leading:
                         const Icon(Icons.list, size: 28, color: Colors.white),
@@ -124,7 +126,7 @@ class ProfilePage extends StatelessWidget {
                   margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.black),
+                      color: const Color(0xFF111111)),
                   child: ListTile(
                     leading: const Icon(Icons.settings,
                         size: 28, color: Colors.white),
@@ -143,7 +145,7 @@ class ProfilePage extends StatelessWidget {
                   margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.black),
+                      color: const Color(0xFF111111)),
                   child: ListTile(
                     leading:
                         const Icon(Icons.person, size: 28, color: Colors.white),
@@ -162,7 +164,7 @@ class ProfilePage extends StatelessWidget {
                   margin: const EdgeInsets.all(5),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: Colors.black),
+                      color: Color(0xFF111111)),
                   child: ListTile(
                     leading:
                         const Icon(Icons.help, size: 28, color: Colors.white),
@@ -196,7 +198,13 @@ class ProfilePage extends StatelessWidget {
                             fontSize: 16, fontWeight: FontWeight.w500),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()),
+                      );
+                    },
                     child: const Text('Oturumu Kapat'),
                   ),
                 )

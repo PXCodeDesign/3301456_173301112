@@ -81,6 +81,7 @@ class _VideoPlayerPageState extends State<VideoPlayerPage> {
         }
       },
       child: Scaffold(
+        extendBody: true,
         appBar: _isFullScreen
             ? null
             : AppBar(

@@ -15,6 +15,8 @@ class MyListPage extends StatelessWidget {
         movies.where((movie) => movie.mylist == true).toList();
 
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60.0),
         child: BackAppBar(),
